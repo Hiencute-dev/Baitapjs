@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    today: <input type="text" name="" id="nhap">
+    <button onclick="lich()">Ok</button>
+   
+    <p id="dm1">display</p>
+    <script>
+        function lich(){
+            var thu = parseInt(document.getElementById("nhap").value);
+
+            switch(thu){
+                case 1:
+                    alert("Chủ Nhật");
+                    break;
+                case 2:
+                    alert("Thứ 2");  
+                    break;
+                case 3:
+                    alert("Thứ 3");
+                    break;
+                case 4:
+                    alert("Thứ 4");
+                    break;
+                case 5:
+                    alert("Thứ 5");
+                    break;
+                case 6:
+                    alert("Thứ 6");
+                    break;
+                case 7:
+                    alert("Thứ 7");
+                    break;
+                default:
+                    alert("Mời bạn nhập lại");
+            }
+            document.getElementById("dm1").innerHTML = thu;
+        }
+    </script>
+</body>
+</html>
