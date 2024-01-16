@@ -28,7 +28,7 @@
             </label>
         </p>
         <button type="button" onclick="sell()"> Sell</button>
-        <button type="button">Cancle</button>
+        <button type="button" onclick="functionCancle()">Cancle</button>
         <table id="tbl" border="1">
            
         </table>
@@ -59,6 +59,12 @@
 
 
     }
+    function functionCancle(){
+            document.getElementById("fname").value="";
+            document.getElementById("qty").value="";
+            document.getElementById("prince").value="";
+            document.getElementById("discount").value="";
+        }
 </script>
 
 </body>
