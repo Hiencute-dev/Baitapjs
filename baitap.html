@@ -17,12 +17,15 @@
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
+            <option value="3">4</option>
         </select><br><br>
         Summary :
         <input type="text" id="sum" value=""></input> <br><br>
         <input type="button" onclick="functionOK()" value="OK"></input>
         <input type="button" onclick="functionCancle()" value="Cancle"></input>
+        <p id="xeploai"></p>
     </form>
+
     <script>
         function functionOK(){
             var hk1 = parseInt(document.getElementById("s1").value);
@@ -31,19 +34,55 @@
             var value = y[y.selectedIndex].value;
             var result;
             if(value==1){
-                result = ((hk1+(hk2*3))/3);
+                result = ((hk1+hk2)/2);
             }
             else if(value==2){
-                result = ((hk1+(hk2*3))/4);
+                result = ((hk1+(hk2*2))/3);
             }
             else if(value==3){
+                result = ((hk1+(hk2*3))/4);
+            }
+            else if(value==4){
                 result = ((hk1+(hk2*4))/5);
             }
             document.getElementById("sum").value=result;
-            
-
-
+            switch(result){
+                case 9:
+                    {
+                    document.getElementById("xeploai").innerHTML="Học sinh xuất sắc";
+                    document.getElementById("xeploai").style.color="yellow";
+                    break;
+                    }
+                case 8:{
+                    document.getElementById("xeploai").innerHTML="Học sinh giỏi";
+                    document.getElementById("xeploai").style.color="red"; 
+                    break;
+                }
+                case 7:
+                    {
+                    document.getElementById("xeploai").innerHTML="Học sinh khá";
+                    document.getElementById("xeploai").style.color="blue";
+                    break;
+                    }
+                case 6:{
+                    document.getElementById("xeploai").innerHTML="Học sinh trung bình";
+                    document.getElementById("xeploai").style.color="violet"; 
+                    break;
+                }
+                case 5:{
+                    document.getElementById("xeploai").innerHTML="Học sinh yếu";
+                    document.getElementById("xeploai").style.color="pink"; 
+                    break;
+                }
+                case 4:{
+                    document.getElementById("xeploai").innerHTML="Học sinh kém";
+                    document.getElementById("xeploai").style.color="brown"; 
+                    break;
+                }
         }
+          
+        }
+
         function functionCancle(){
             document.getElementById("s1").value="";
             document.getElementById("s2").value="";
